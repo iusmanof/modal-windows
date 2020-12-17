@@ -8,14 +8,13 @@ const CopyPlugin = require("copy-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '',
-        //filename: '[name].[contenthash].js', // default: main.js
+        // filename: '[name].[contenthash].js', // default: main.js
     
     },
     devtool: 'inline-source-map', // readable src code in dist/
