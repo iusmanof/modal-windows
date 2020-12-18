@@ -119,7 +119,16 @@ module.exports = {
         minimize: true,
         minimizer: [
             new HtmlMinimizerPlugin(),
-            new CssMinimizerPlugin(),
+            new CssMinimizerPlugin({
+                minimizerOptions: {
+                    preset: [
+                      'default',
+                      {
+                        discardComments: { removeAll: false },
+                      },
+                    ],
+                  },
+            }),
         ],
     },
 };
